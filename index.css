@@ -1,0 +1,265 @@
+
+.IT{
+    display: flex;
+    justify-content: space-evenly;
+    color: white;
+    list-style-type: none;
+    margin-top: 1px;
+    font-size: 8px;
+    background-color: black;
+    height: 15px;
+    padding: 15px 15px;
+}
+
+section{
+    background-image: url(./IMAGES/BGIMAGE.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 60vh;
+    clip-path: polygon(30% 0%, 70% 0%, 100% 0, 100% 70%, 50% 100%, 50% 100%, 0% 70%, 0 0);
+    color: white;
+    text-align: center;
+    margin-top: -17px;
+    padding: 10px 10px;
+}
+section p{
+    font-size: 8px;
+    letter-spacing: 10px;
+}
+section h1{
+    font-size: 30px;
+}
+section .webdes{
+    color: greenyellow;
+}
+section .dev{
+    color: green;
+}
+section .brand{
+    color: orange;
+}
+section button{
+    border-radius: 20px;
+    background-color: rgb(197, 87, 105);
+    color: white;
+    padding: 5px 5px;
+    font-size: 10px;
+    border: none;
+}
+/* code for main */
+main{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    gap: 20px;
+}
+main img{
+    width: 150px;
+    height: 40vh;
+    border-radius: 10px;
+}
+main button{
+    border-radius: 20px;
+    background-color: rgb(197, 87, 105);
+    color: white;
+    padding:  5px;
+    font-size: 10px;
+    border: none;  
+}
+main p{
+    font-size: 10px;
+    margin-top: -15px;
+}
+main h5{
+    margin-top: -4px;
+}
+main .pro{
+ margin-top: -5px;
+}
+main h3 p{
+    padding: 10px 10px;
+    margin-top: 40px;
+    text-align: center;  
+
+}
+.box{
+    width: 140px;
+    height: 35vh;
+    border: 50px rgb(207, 207, 207);
+    border-radius: solid 5px;
+    background-color: rgb(247, 247, 243);
+    transition: 0.9s;
+    
+}
+ .boo{
+    display: flex;
+    gap: 10px;
+    place-content: center;
+    margin-top: 20px;
+    
+}
+.img{
+    width: 30px;
+    padding: 50px;
+    margin-top: -35px;
+}
+.img2{
+    width: 30px;
+    padding: 50px;
+    margin-top: -35px;
+}
+.img3{
+    width: 30px;
+    padding: 50px;
+    margin-top: -35px; 
+}
+.box:hover{
+    transform: translateY(-25px);
+    background-color: black;
+    color: white;
+}
+
+
+
+/* mobile only */
+@media only screen and (max-width:768px){
+ .IT{
+    display: none;
+ }
+ section{
+    place-items: center;
+    width: 375px;
+ }
+ main{
+    display: grid;
+    margin: auto;
+    margin-top: 20px;
+ }
+ .boo{
+    
+    width: 400px;
+ }
+}
+
+
+/* for navbar */
+.menu-border{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+.menu_bar{
+    position: relative;
+    display: block;
+    width: 50px;
+    cursor: pointer;
+    appearance: none;
+    background: none;
+    outline: none;
+    border: none;
+    margin-top: -35px;
+
+}
+.menu_bar .bar,
+.menu_bar:after,
+.menu_bar.before{
+    width: 30px;
+    content: "";
+    display: block;
+    height: 2px;
+    background-color: black;
+    margin: 8px -10px;
+    margin-left: 10px;
+    margin-top: 5px;
+    transition: 0.4s;
+    border-radius: 1px;
+}
+.menu_bar.is-active:before{
+    transform: rotate(-45deg) translate(2px,-4px);
+}
+.menu_bar.is-active:after{
+    transform: rotate(45deg)translate(9px,8px);
+    margin-top: -30px;
+}
+.menu_bar.menu_bar.is-active .bar{
+    opacity: 0;
+}
+.mobile-nav{
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 65%;
+    height: 25vh;
+    background-color: aliceblue;
+    z-index: 98;
+    font-weight: bold;
+    opacity: 0.9;
+    transition: right 0.8s ease-in-out;
+    margin-top: 85px;
+    border-bottom-left-radius: 10px;
+}
+.div img{
+   width: 200px;
+   height: 200px;
+   margin-top: 15px;
+    justify-content: space-evenly;
+    animation: scroll 10s linear infinite;
+}
+@keyframes scroll{
+     0%{
+        transform: translateX(100%);
+    }
+    100%{
+        transform: translateX(-100%);
+    }
+
+    
+}
+/* home gradient */
+.gradient {
+    width: 100%;
+    height: 50vh;
+    margin-top: 15px;
+    background: linear-gradient(to bottom right, steelblue, skyblue,pink, orange);
+    
+    background-size: 100% 100%;
+    animation: staggerGradient 2s linear infinite;  
+}
+
+@keyframes staggerGradient {
+    0% {
+        background-position: 100% 50%;
+    }
+    10% {
+        background-position: 90% 50%;
+    }
+    20%{
+        background-position: 80% 50%;
+    }
+    30%{
+        background-position: 70% 50%;
+    }
+    40%{
+        background-position: 60% 50%;
+
+    }
+    50%{
+        background-position: 50% 50%;
+    }
+    60%{
+        background-position: 40% 50%;
+    }
+    70%{
+        background-position: 30% 50%;
+    }
+    80%{
+        background-position: 20% 50%;
+    }
+    90%{
+        background-position: 10% 50%;
+    }
+    100%{
+        background-position: 0% 50% ;
+    }
+}
